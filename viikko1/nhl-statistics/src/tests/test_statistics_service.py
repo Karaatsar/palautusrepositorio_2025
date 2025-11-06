@@ -4,8 +4,8 @@ from player import Player
 
 def test_two_consecutive_calculations():
     players=[
-        Player["Saku", "MTL", 10, 20],
-        Player["Teemu", "ANA", 15, 25]
+        Player("Saku", "MTL", 10, 20),
+        Player("Teemu", "ANA", 15, 25)
     ]
     stats= StatisticsService(players)
 
