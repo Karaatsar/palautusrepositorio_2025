@@ -3,7 +3,7 @@ from statistics_service import StatisticsService
 from player import Player
 
 class PlayerReaderStub:
-    def get_players(self):
+    def get_players(self): 
         return [
             Player("Saku", "MTL", 10, 20),
             Player("Teemu", "ANA", 15,25)
@@ -19,3 +19,5 @@ class PlayerReaderStub:
 
         assert player1.points==30
         assert player2.points==40
+
+        
