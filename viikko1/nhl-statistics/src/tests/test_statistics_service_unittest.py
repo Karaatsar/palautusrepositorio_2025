@@ -36,7 +36,7 @@ class TestStatisticsService(unittest.TestCase):
         self.assertIn("Kurri", names)
     
     def test_top_scorers(self):
-        top_scorers=self.stats.top_scorers(2)
+        top_scorers=self.stats.top(2)
         self.assertEqual(len(top_scorers), 3)
         self.assertEqual(top_scorers[0].name, "Gretzky")  # 124 points
         self.assertEqual(top_scorers[1].name, "Lemieux")  # 99 points
@@ -44,4 +44,3 @@ class TestStatisticsService(unittest.TestCase):
     
     if __name__=="__main__":
         unittest.main()
-        
