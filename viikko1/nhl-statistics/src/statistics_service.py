@@ -32,5 +32,5 @@ class StatisticsService:
         else:
             key_function = lambda player: player.points
         
-        sorted_players =sorted(self.players, key=key_function, reverse=True)
+        sorted_players =sorted(self._players, key=key_function, reverse=True)
         return sorted_players[:how_many]
