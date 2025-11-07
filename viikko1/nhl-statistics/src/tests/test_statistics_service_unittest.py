@@ -48,7 +48,7 @@ class TestStatisticsService(unittest.TestCase):
         self.assertEqual(top[0].name, "Gretzky")
     
     def test_top_scorers(self):
-        top_scorers=self.stats.top(2)
+        top_scorers=self.stats.top(3)
         self.assertEqual(len(top_scorers), 3)
         self.assertEqual(top_scorers[0].name, "Gretzky")  # 124 points
         self.assertEqual(top_scorers[1].name, "Lemieux")  # 99 points
