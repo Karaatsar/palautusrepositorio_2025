@@ -5,6 +5,9 @@ class Player:
         self.team=data["team"]
         self.goals=data["goals"]
         self.assists=data["assists"]
+    
+    def total_points(self):
+        return self.goals + self.assists
 
     
     def __str__(self):

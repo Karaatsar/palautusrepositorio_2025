@@ -41,7 +41,7 @@ def main():
             )
         console.print(table)
 
-    except Exeption as e:
+    except Exception as e:
         console.print(f"An error occurred: {e}", style="bold red")
 
     
