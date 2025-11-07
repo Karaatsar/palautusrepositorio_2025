@@ -9,8 +9,10 @@ def main():
 
     finnish_players = [player for player in players if player.nationality=="FIN"]
 
+    sorted_finnish_players = sorted(finnish_players, key=lambda player: player.goals + player.assists, reverse=True)
+
     print("players from FIN:\n")
-    for player in finnish_players:
+    for player in sorted_finnish_players:
         print(player)
 if __name__ == "__main__":
     main()
