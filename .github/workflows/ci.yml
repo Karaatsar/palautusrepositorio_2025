@@ -29,7 +29,9 @@ jobs:
           poetry add --group dev pylint
 
       - name: Run tests
+        working-directory: ./viikko1/nhl-statistics
         run: poetry run pytest
 
       - name: Run Pylint
-        run: poetry run pylint src
+        working-directory: ./viikko1/nhl-statistics
+        run: poetry run pylint srcs
