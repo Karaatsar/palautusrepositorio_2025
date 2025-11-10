@@ -1,0 +1,22 @@
+[MAIN]
+ignore = venv, .venv, __pycache__, .pytest_cache
+init-hook = 'import sys; sys.path.append("src")'
+
+[FORMAT]
+
+max-line-length =80
+indent-string='    '
+
+[REFACTORING]
+
+max-nested-blocks=2
+
+[DESIGN]
+
+max-statements=10
+max-attributes=5
+
+[MESSAGES CONTROL]
+disable=missing-module-docstring,
+        missing-function-docstring,
+        missing-class-docstring
