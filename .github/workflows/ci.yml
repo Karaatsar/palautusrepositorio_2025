@@ -19,7 +19,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.13'
+          python-version: '3.11'
 
       - name: Install dependencies
         working-directory: viikko1/nhl-statistics
@@ -27,7 +27,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install poetry
           poetry install
-          poetry add --dev pylint
+          poetry run pip install pylint
 
       - name: Run tests
         working-directory: viikko1/nhl-statistics
@@ -35,4 +35,4 @@ jobs:
 
       - name: Run Pylint
         working-directory: viikko1/nhl-statistics
-        run: poetry run pylint srcs
+        run: poetry run pylint src
