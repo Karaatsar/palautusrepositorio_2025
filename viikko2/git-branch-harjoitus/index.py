@@ -1,4 +1,5 @@
 # tehdään alussa importit
+print("Muutos alkuperäisestä kloonista")
 
 from logger import logger
 from summa import summa
