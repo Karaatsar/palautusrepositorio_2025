@@ -9,10 +9,12 @@ from flask import (
 
 from repositories.user_repository import user_repository
 from services.user_service import user_service
+from counter import Counter
+
 
 app = Flask(__name__)
 app.secret_key = "MXRg2upmZGaSR~2nMaGmiwW0o.lg_w"
-
+cnt = Counter()
 
 def redirect_to_login():
     return redirect(url_for("render_login"))
@@ -98,3 +100,13 @@ def ping():
 def reset_tests():
     user_repository.delete_all()
     return "Reset"
+
+@app.route("/increment", methods=["POST"])
+def increment():
+    cnt.increase()
+    return redirect("/")
+
+@app.route("/reset", methods=["POST"])
+def reset():
+    cnt.reset()
+    return redirect("/")
